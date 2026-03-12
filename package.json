@@ -1,0 +1,35 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "my-extension",
+  "title": "My Extension",
+  "description": "A Raycast extension built from the template",
+  "icon": "command-icon.png",
+  "author": "harunonsystem",
+  "categories": ["Productivity"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Hello World",
+      "description": "A sample command that displays a list",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.9",
+    "@raycast/utils": "^2.2.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "~22.13.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.8.0"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix"
+  }
+}
