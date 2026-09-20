@@ -1,5 +1,5 @@
 # Changelog
 
-## [Initial Version] - YYYY-MM-DD
+## [Initial Version] - {PR_MERGE_DATE}
 
 - Initial release

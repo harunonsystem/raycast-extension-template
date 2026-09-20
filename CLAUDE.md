@@ -1,12 +1,15 @@
 # Raycast Extension Development Guide
 
+Use Node.js 22.22.2 or later. Run `npm ci` to install the committed lockfile.
+
 ## Available Commands
 
 ```bash
 npm run dev        # Start development mode (opens in Raycast)
-npm run build      # Build the extension
+npm run build      # Type-check and build into dist/
 npm run lint       # Run ESLint checks
 npm run fix-lint   # Auto-fix ESLint issues
+npm run publish    # Open a Raycast Store submission PR
 ```
 
 ## Project Structure

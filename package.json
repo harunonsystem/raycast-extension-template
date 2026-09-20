@@ -5,32 +5,43 @@
   "description": "A Raycast extension built from the template",
   "icon": "command-icon.png",
   "author": "harunonsystem",
-  "categories": ["Productivity"],
+  "categories": [
+    "Productivity"
+  ],
   "license": "MIT",
-  "platforms": ["macOS"],
+  "platforms": [
+    "macOS"
+  ],
   "commands": [
     {
       "name": "index",
-      "title": "Hello World",
+      "title": "Browse Sample Items",
       "description": "A sample command that displays a list",
       "mode": "view"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.104.9",
-    "@raycast/utils": "^2.2.3"
+    "@raycast/api": "^2.4.1",
+    "@raycast/utils": "^2.3.1"
   },
   "devDependencies": {
-    "@raycast/eslint-config": "^2.1.1",
-    "@types/node": "~22.13.0",
-    "@types/react": "^19.0.0",
-    "eslint": "^9.0.0",
-    "typescript": "^5.8.0"
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.8",
+    "typescript": "^6.0.3"
   },
   "scripts": {
-    "build": "ray build",
+    "build": "ray build -e dist -o dist",
     "dev": "ray develop",
     "lint": "ray lint",
-    "fix-lint": "ray lint --fix"
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish",
+    "prepublishOnly": "node -e \"throw new Error('Use npm run publish to publish to the Raycast Store.')\"",
+    "check-runtime-types": "node -e \"const assert = require('node:assert/strict'); const { peerDependencies } = require('./node_modules/@raycast/api/package.json'); for (const name of ['@types/node', '@types/react']) assert.equal(require(name + '/package.json').version, peerDependencies[name], name + ' must match the Raycast API peer dependency');\""
+  },
+  "engines": {
+    "node": ">=22.22.2"
   }
 }
