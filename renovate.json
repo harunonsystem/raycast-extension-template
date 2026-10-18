@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": ["local>harunonsystem/.github:renovate-config"],
   "automerge": true,
   "automergeType": "pr",
   "automergeStrategy": "squash",
