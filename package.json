@@ -22,13 +22,13 @@
   ],
   "dependencies": {
     "@raycast/api": "^2.4.1",
-    "@raycast/utils": "^2.3.2"
+    "@raycast/utils": "^2.3.3"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.2.0",
     "@types/node": "22.19.17",
     "@types/react": "19.0.10",
-    "eslint": "^10.12.0",
+    "eslint": "^10.13.0",
     "prettier": "^3.9.10",
     "typescript": "^6.0.3"
   },
@@ -42,6 +42,6 @@
     "check-runtime-types": "node -e \"const assert = require('node:assert/strict'); const { peerDependencies } = require('./node_modules/@raycast/api/package.json'); for (const name of ['@types/node', '@types/react']) assert.equal(require(name + '/package.json').version, peerDependencies[name], name + ' must match the Raycast API peer dependency');\""
   },
   "engines": {
-    "node": ">=22.23.3"
+    "node": ">=22.23.4"
   }
 }
