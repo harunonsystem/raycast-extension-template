@@ -1,17 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>harunonsystem/.github:renovate-config"],
+  "extends": [
+    "local>harunonsystem/.github:renovate-config.jsonc",
+    "local>harunonsystem/.github:renovate-npm-lockfile.jsonc"
+  ],
   "automerge": true,
   "automergeType": "pr",
   "automergeStrategy": "squash",
-  "platformAutomerge": true,
   "minimumReleaseAge": "3 days",
-  "lockFileMaintenance": {
-    "enabled": true
-  },
   "packageRules": [
     {
-      "matchPackageNames": ["@raycast/api", "@types/node", "@types/react"],
+      "matchPackageNames": [
+        "@raycast/api",
+        "@types/node",
+        "@types/react"
+      ],
       "groupName": "Raycast runtime"
     }
   ]
